@@ -5,3 +5,8 @@ from app import app
 @app.route('/')
 def index():
     return flask.render_template("home.html")
+
+
+@app.route('/activities')
+def act():
+    return flask.render_template("activities.html")
