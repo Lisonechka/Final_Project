@@ -10,3 +10,8 @@ def index():
 @app.route('/activities')
 def act():
     return flask.render_template("activities.html")
+
+
+@app.route('/facts')
+def act():
+    return flask.render_template("facts.html")
