@@ -13,5 +13,5 @@ def act():
 
 
 @app.route('/facts')
-def act():
+def fact():
     return flask.render_template("facts.html")
