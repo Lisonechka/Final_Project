@@ -1,5 +1,7 @@
 import flask
-from app import app
+from flask_socketio import send
+
+from app import app, socketio
 
 
 @app.route('/')
@@ -15,3 +17,9 @@ def act():
 @app.route('/facts')
 def fact():
     return flask.render_template("facts.html")
+
+
+@socketio.on('message', namespace='/facts')
+def handleMessage(msg):
+    print('Message: ' + msg)
+    send(msg, broadcast=True)
