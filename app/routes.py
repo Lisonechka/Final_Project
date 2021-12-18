@@ -19,7 +19,9 @@ def fact():
     return flask.render_template("facts.html")
 
 
-@socketio.on('message', namespace='/facts')
+@socketio.on('message')
 def handleMessage(msg):
     print('Message: ' + msg)
     send(msg, broadcast=True)
+
+
