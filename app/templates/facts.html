@@ -2,42 +2,16 @@
 <head>
 <title>Chat Room</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <style>
-        div.banner {
-        background: -webkit-linear-gradient(270deg, rgb(190, 233, 242) 30%, rgb(58, 207, 205) 77%);
-        background: -moz-linear-gradient(270deg, rgb(190, 233, 242) 30%, rgb(58, 207, 205) 77%);
-        background: linear-gradient(270deg, rgb(190, 233, 242) 30%, rgb(58, 207, 205) 77%);
-        }
-        body {
-        background: #f4f4f4;
-        }
-        ul {
-        font-size: 2em;
-        display: table;
-        margin: 0 auto;
-        text-align: left;
-        }
-        .display {
-        font-size: calc(1.475rem + 2.7vw);
-        font-weight: 300;
-        line-height: 1.2;
-        }
-        div.fact {
-        margin-top: 50px;
-        }
-        h1, h3 {
-        color: white;
-        margin-bottom: -15px;
-        }
-    </style>
+    <link rel="stylesheet" href="static/style.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
-<div style="text-align: center"  class="text-white  shadow-sm rounded banner" >
-          <h1 class="display">Fun facts</h1> <i class="fas fa-share-alt"></i>
+<div  class="text-white  shadow-sm rounded banner" >
+    <h1 class="display">Fun facts</h1>
+       <div style="text-align: right; margin-right: 50px" id="callback-button" class="header__button get-modal_1"><i class="fas fa-share-alt"></i></div>
           <h3>Think about a fun fact about yourselves and write it on a note</h3>
-        </div>
+</div>
 
 <script type="text/javascript">
 $(document).ready(function() {
@@ -63,5 +37,18 @@ $(document).ready(function() {
     <button id="sendbutton">Send</button>
     <ul id="messages"></ul>
 </div>
+
+  <div class="modal" id="modal-1">
+    <div class="modal__content">
+      <button class="modal__close-button"><img src="static/close.svg" width="12" alt=""></button>
+      <!-- Контент модального окна -->
+      <h5 class="modal-title">Modal title</h5>
+       <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/scripts.js"></script>
 </body>
 </html>
