@@ -64,8 +64,8 @@ body {
   max-width: 500px;
   padding: 50px;
   background: #f9f9f9;
-  -webkit-box-shadow: 0 5px 15px black;
-          box-shadow: 0 5px 15px black;
+  -webkit-box-shadow: 0 5px 15px grey;
+          box-shadow: 0 5px 15px grey;
   border-radius: 3px;
   position: relative;
 }
@@ -101,15 +101,6 @@ body {
           transform: rotate(180deg);
 }
 
-.modal__title {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  margin: 0 0 15px;
-}
-
-.modal__description {
-  font-size: 1.125rem;
-}
 
 div.banner {
         background: -webkit-linear-gradient(270deg, rgb(190, 233, 242) 30%, rgb(58, 207, 205) 77%);
@@ -138,3 +129,7 @@ div.banner {
         margin-bottom: -15px;
         text-align: center;
         }
+
+h2, h4 {
+        color: #696969;
+}

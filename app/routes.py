@@ -1,4 +1,5 @@
 import flask
+
 from flask_socketio import send
 
 from app import app, socketio
