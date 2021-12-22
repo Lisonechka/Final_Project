@@ -26,3 +26,6 @@ def handleMessage(msg):
     send(msg, broadcast=True)
 
 
+@app.route('/jobs')
+def job():
+    return flask.render_template("job.html")

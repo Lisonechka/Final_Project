@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Activities</title>
   <link href="static/styles.css" rel="stylesheet" />
 </head>
 <body>
@@ -23,7 +23,7 @@
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="static/facts.jpg" alt="fun facts" class="img-fluid card-img-top">
           <div class="p-4">
-            <a type="button" class="btn btn-primary btn-lg" href="{{ url_for('fact') }}">Fun Fact</a>
+            <h5> <a href="{{ url_for('fact') }}" class="text-dark">Fun Facts</a></h5>
             <p class="small text-muted mb-0">Fun Fact is a simple and great energizer to get to know more about each other. People will anonymously write fun facts, then the group will try to match a person with their fun fact.</p>
           </div>
         </div>
@@ -34,7 +34,7 @@
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
         <div class="bg-white rounded shadow-sm"><img src="static/jobs.jpg" alt="first job" class="img-fluid card-img-top">
           <div class="p-4">
-            <h5> <a href="#" class="text-dark">My first job</a></h5>
+            <h5> <a href="{{ url_for('job') }}" class="text-dark">My first job</a></h5>
             <p class="small text-muted mb-0">My first job is a great energizer that gets everyone more familiar with each other, and usually foster some interesting conversations.</p>
           </div>
         </div>
@@ -53,11 +53,8 @@
       <!-- End -->
 
     </div>
-    <div class="py-5 text-right"><a href="#" class="btn btn-dark px-5 py-3 text-uppercase">Show me more</a></div>
   </div>
 </div>
 
-<a type="button" class="btn btn-primary btn-lg" href="{{ url_for('fact') }}">Let's start</a>
-<a href="http://127.0.0.1:5000/facts">Let's start</a>
 </body>
 </html>
